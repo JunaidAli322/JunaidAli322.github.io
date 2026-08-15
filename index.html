@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junaid Ali | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">📊</div>
+      <h2>JUNAID ALI</h2>
+      <p>Data Analyst</p>
+    </div>
+    <nav>
+      <a href="#overview" class="active">⌂ <span>Overview</span></a>
+      <a href="#dashboards">▣ <span>Dashboards</span></a>
+      <a href="#projects">▤ <span>Projects</span></a>
+      <a href="#skills">⚙ <span>Skills</span></a>
+      <a href="#about">● <span>About Me</span></a>
+      <a href="#contact">✉ <span>Contact</span></a>
+    </nav>
+    <div class="connect">
+      <h3>Let's Connect</h3>
+      <p>I'm open to learning, projects and professional opportunities.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+    <small>© 2026 Junaid Ali<br>All rights reserved.</small>
+  </aside>
+
+  <main>
+    <header id="overview">
+      <div>
+        <p class="eyebrow">DATA ANALYST PORTFOLIO</p>
+        <h1>Hi, I'm <span>Junaid Ali</span> 👋</h1>
+        <h2>Turning Data into <span>Insights</span></h2>
+        <p class="intro">Welcome to my interactive portfolio. Explore my analytics projects, dashboards and data skills.</p>
+      </div>
+      <div class="top-actions">
+        <a class="outline-btn" href="#" onclick="downloadResume();return false;">↓ Download Resume</a>
+        <a class="icon-btn" href="https://github.com/JunaidAli322" target="_blank">GH</a>
+        <a class="icon-btn" href="#contact">in</a>
+      </div>
+    </header>
+
+    <section class="kpis">
+      <div class="card kpi"><div class="kpi-icon">▣</div><div><p>Total Projects</p><strong>8</strong><small>+2 this month ↗</small></div></div>
+      <div class="card kpi"><div class="kpi-icon purple">◉</div><div><p>Dashboards</p><strong>5</strong><small>+1 this month ↗</small></div></div>
+      <div class="card kpi"><div class="kpi-icon">▥</div><div><p>Data Analyses</p><strong>12</strong><small>+3 this month ↗</small></div></div>
+      <div class="card kpi"><div class="kpi-icon orange">★</div><div><p>Tools</p><strong>6</strong><small>Excel • Power BI • SQL</small></div></div>
+    </section>
+
+    <section id="dashboards" class="dashboard card">
+      <div class="section-title">
+        <div><span class="mini">▥</span><h2>Sales Performance Dashboard</h2></div>
+        <button onclick="resetDashboard()">↻ Reset</button>
+      </div>
+      <div class="filters">
+        <label>Year<select id="yearFilter" onchange="updateDashboard()"><option value="all">All Years</option><option>2026</option><option>2025</option></select></label>
+        <label>Category<select id="categoryFilter" onchange="updateDashboard()"><option value="all">All Categories</option><option>Technology</option><option>Office</option><option>Home</option></select></label>
+      </div>
+      <div class="metric-row">
+        <div><span>Gross Sales</span><strong id="gross">$4.82M</strong><em>▲ 18.6%</em></div>
+        <div><span>Net Sales</span><strong id="net">$4.08M</strong><em>▲ 16.4%</em></div>
+        <div><span>Total Quantity</span><strong id="qty">29,354</strong><em>▲ 11.3%</em></div>
+        <div><span>Transactions</span><strong id="transactions">6,143</strong><em>▲ 9.7%</em></div>
+      </div>
+      <div class="charts">
+        <div class="chart-box"><h3>Net Sales Over Time</h3><canvas id="salesChart"></canvas></div>
+        <div class="chart-box"><h3>Sales by Category</h3><canvas id="categoryChart"></canvas></div>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <div id="skills" class="card">
+        <div class="section-title"><h2>Technologies & Tools</h2></div>
+        <div class="tools">
+          <span>📗 Excel</span><span>📊 Power BI</span><span>🗄️ SQL</span><span>🐍 Python</span><span>📈 Tableau</span><span>📋 Google Sheets</span>
+        </div>
+      </div>
+      <div id="projects" class="card">
+        <div class="section-title"><h2>Recent Projects</h2><a href="#projects">View All</a></div>
+        <div class="project"><b>📗 Sales Performance Dashboard</b><small>Excel Dashboard</small></div>
+        <div class="project"><b>📊 HR Analytics Dashboard</b><small>Power BI</small></div>
+        <div class="project"><b>🗄️ E-commerce Data Analysis</b><small>SQL</small></div>
+        <div class="project"><b>🐍 Customer Segmentation</b><small>Python</small></div>
+      </div>
+    </section>
+
+    <section id="about" class="card about">
+      <h2>About Me</h2>
+      <p>I am building my skills in data analytics with a focus on Excel, Power BI, SQL and Python. My goal is to turn raw data into clear insights that support better decisions.</p>
+    </section>
+
+    <section id="contact" class="card contact">
+      <h2>Let's Connect</h2>
+      <p>Interested in collaborating or discussing a data project?</p>
+      <a class="btn" href="mailto:your-email@example.com">Send Me an Email</a>
+    </section>
+
+    <footer>“Data is not just numbers — it's the story behind decisions.”<br><span>— Junaid Ali</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
